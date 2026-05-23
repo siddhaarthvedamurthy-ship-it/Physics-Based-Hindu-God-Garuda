@@ -1,654 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project GARUDA — Vedic Biomechanical Engineering Framework</title>
-  <meta name="description" content="Project GARUDA: A sacred-scientific framework unifying Vedic cosmological architecture with hard sci-fi biophysical engineering specifications." />
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <!-- App Entry -->
-  <script src="app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project GARUDA: Biomechanical & Vedic Lineage Interface</title>
+    <!-- Links to your standalone stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Imports the Three.js library for true, movable 3D rendering -->
+    <script src="https://cloudflare.com"></script>
 </head>
 <body>
-<div id="app">
 
-  <!-- ─────────────────────── MASTHEAD ─────────────────────────── -->
-  <header class="masthead" role="banner">
-    <div class="masthead-inner">
-      <div class="masthead-brand">
-        <span class="brand-eyebrow">Vedic Biomechanical Engineering Framework · Rev. IV</span>
-        <h1 class="brand-title">Project <span>GARUDA</span></h1>
-        <p class="brand-subtitle">Sacred Structural Intelligence · Titanium Grade-5 Endoskeletal Architecture · Cosmological Propulsion Systems</p>
-      </div>
-      <div class="masthead-meta">
-        <span class="meta-badge">LIVE SIMULATION ACTIVE</span>
-        <span class="meta-classification">CLASSIFICATION: VEDIC TIER I · INTERNAL DOCUMENT</span>
-      </div>
+    <header>
+        <h1>Project GARUDA</h1>
+        <p>Biomechanical Engineering × Cosmic Mythological Interface</p>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('blueprints')">Biomechanical Blueprints</button>
+        <button class="tab-btn" onclick="switchTab('simulator')">Dynamics & Physics</button>
+        <button class="tab-btn" onclick="switchTab('hinduism')">Sacred Lore & Pantheon</button>
     </div>
-  </header>
 
-  <!-- Vedic Ornament -->
-  <div class="vedic-ornament" aria-hidden="true">
-    <div class="vedic-ornament-line"></div>
-    <span class="vedic-ornament-symbol">ॐ ✦ ᳗ ✦ ᳕</span>
-    <div class="vedic-ornament-line"></div>
-  </div>
-
-  <!-- ─────────────────────── TAB NAVIGATION ───────────────────── -->
-  <nav class="tab-nav" role="navigation" aria-label="Primary Sections">
-    <ul class="tab-list" role="tablist">
-      <li class="tab-item" role="presentation">
-        <button class="tab-btn active"
-                id="tab-btn-1"
-                role="tab"
-                aria-selected="true"
-                aria-controls="panel-1"
-                data-tab="1">
-          <span class="tab-number">I.</span>
-          Biomechanical Blueprints
-        </button>
-      </li>
-      <li class="tab-item" role="presentation">
-        <button class="tab-btn"
-                id="tab-btn-2"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-2"
-                data-tab="2">
-          <span class="tab-number">II.</span>
-          Dynamics &amp; Physics
-        </button>
-      </li>
-      <li class="tab-item" role="presentation">
-        <button class="tab-btn"
-                id="tab-btn-3"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-3"
-                data-tab="3">
-          <span class="tab-number">III.</span>
-          Vedic Lineage Framework
-        </button>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- ─────────────────────── MAIN CONTENT ─────────────────────── -->
-  <main class="main-content" role="main">
-
-    <!-- ══════════════════════════════════════════════════════
-         TAB PANEL 1 — BIOMECHANICAL BLUEPRINTS
-    ══════════════════════════════════════════════════════ -->
-    <section class="tab-panel active" id="panel-1" role="tabpanel" aria-labelledby="tab-btn-1">
-      <div class="blueprint-layout">
-
-        <!-- 3D Holographic Viewport -->
-        <div class="viewport-container" id="viewport-container">
-          <div class="viewport-header">
-            <span class="viewport-title">◈ HOLOGRAPHIC STRUCTURAL MODEL — GARUDA CLASS</span>
-            <span class="viewport-coords" id="viewport-coords">CAM: θ=0.00 φ=0.00 r=18.0</span>
-          </div>
-
-          <div id="mode-label">⊕ WING FLIGHT MODE</div>
-          <canvas id="garuda-canvas"></canvas>
-
-          <div class="viewport-controls">
-            <span class="control-hint">⟲ Left-Drag: Rotate · Scroll: Zoom</span>
-            <button class="btn-toggle-mode" id="btn-toggle-mode" aria-label="Toggle between Flight and Cape mode">
-              <span class="mode-indicator" id="mode-indicator"></span>
-              <span id="toggle-mode-label">SWITCH TO CAPE MODE</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Technical Literature Panel -->
-        <div class="literature-panel">
-
-          <!-- Chapter 1 -->
-          <div class="chapter-accordion">
-            <button class="chapter-header open" data-chapter="ch1" aria-expanded="true">
-              <span class="chapter-num">CH.I</span>
-              <span class="chapter-title">Titanium Cranial Core &amp; Endoskeletal Load Distribution</span>
-              <span class="chapter-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="chapter-body open" id="ch1">
-              <p>
-                The cranial superstructure of Project GARUDA is forged from a continuous, monocoque shell of Grade-5 Titanium alloy — the aerospace-grade Ti-6Al-4V variant — constituting the primary telemetry and cognitive processing node of the organism. Unlike biological cranial vaults constrained by ossification timelines and organic calcium-phosphate lattice densities, the GARUDA cranial core was engineered through high-pressure isostatic compaction followed by electron-beam vacuum sintering, yielding a zero-porosity titanium matrix with an ultimate tensile strength of 1,170 MPa. The resulting shell weighs precisely 4.2 kilograms in its unlined state, yet sustains impact energies exceeding those encountered during terminal-velocity engagement events at sea level — categorically beyond the threshold survivable by any organic cranial structure.
-              </p>
-              <p>
-                Internal stratification of the cranial cavity follows a sacred geometrical logic derived from the Vedic Vastu Purusha Mandala — the primordial cosmological grid partitioning space into hierarchical zones of function and sanctity. The northeast quadrant, designated Ishanya, houses the primary neural routing cortex and the quantum-coherent synaptic bus. The southeast sector, Agneya, contains the thermoregulatory furnace core, maintaining a constant internal temperature of 37.8°C regardless of ambient extremes ranging from arctic stratospheric cold at −68°C to low-orbit radiative exposure of +120°C on the sun-facing surface. The southwest Nairutya quadrant supports gravitational ballast channels — titanium-encased fluid reservoirs that dynamically redistribute mass to maintain cranial equilibrium during multi-axis aerial maneuvers. This triaxial counterbalancing system renders the GARUDA organism effectively immune to vestibular disorientation under load factors exceeding 28G — a threshold that would induce permanent cerebellar hemorrhage in unaugmented biological systems.
-              </p>
-              <div class="spec-callout">
-                <strong>STRUCTURAL DATUM:</strong> Cranial shell tensile strength: 1,170 MPa · Wall thickness: 6.4mm · Total integrated cranial mass: 7.8 kg (with internal instrumentation)
-              </div>
-              <p>
-                The endoskeletal load distribution framework descends from the cranial vault into the cervical spine through a titanium-alloy condylar coupling system capable of bearing continuous axial loads of 380 kN — equivalent to the compressive force exerted by a loaded articulated truck resting upon a single column. The cervical vertebrae, sixteen in total versus the biological norm of seven, are individually milled titanium cylinders interpenetrated by elastomeric polymer discs with a Shore A hardness of 60, providing adequate shock absorption during landing impacts registered at energies up to 1,400 kilojoules. A central fluid-pressurized conduit runs longitudinally through the vertebral column, delivering synthetic cerebrospinal fluid at a regulated pressure of 2.3 kPa — maintaining intracranial pressure homeostasis even during the extreme hydrostatic gradient shifts encountered in near-vertical aerial dives at supersonic descent velocities. The spinal column thus functions not merely as a load bearer, but as a pressurized structural conduit: a titanium hydraulic column bridging cognition and locomotion in a single unified architectural element.
-              </p>
-              <p>
-                The entire endoskeletal framework, from cranial vault to plantar anchor points, operates within a five-tier load redistribution hierarchy. Tier One absorbs impact loads at terminal attachment points such as joints, digits, and wing-root pivots. Tier Two propagates load vectors diagonally through triangulated rib-cage framing — a carbon-titanium composite truss system modeled on geodesic dome mathematics. Tier Three resolves residual tensile loads in the vertical spine column. Tier Four redistributes dynamic torsional stresses across the pelvic girdle and iliac crests, which are widened to 48 centimeters to accommodate the wing-root attachment hardware. Tier Five — the final dampening layer — dissipates residual vibrational energy into the plantar footpad assemblies, which integrate magnetorheological fluid reservoirs tunable to variable ground surface conditions. This five-tier hierarchy ensures that no single structural node ever receives more than 12% of total organism load at any given moment, providing extraordinary resilience against cumulative fatigue fracture under sustained operational tempos.
-              </p>
+    <!-- TAB 1: 3D BIOMECHANICAL BLUEPRINTS -->
+    <div id="blueprints" class="tab-content active grid-2col">
+        <div class="panel">
+            <h2>Movable 3D Schematic Diagram</h2>
+            <div class="control-group">
+                <button class="btn" id="wingToggleBtn" onclick="toggleWingState()">Toggle Wing State: Flight Mode</button>
             </div>
-          </div>
-
-          <!-- Chapter 2 -->
-          <div class="chapter-accordion">
-            <button class="chapter-header" data-chapter="ch2" aria-expanded="false">
-              <span class="chapter-num">CH.II</span>
-              <span class="chapter-title">Carbon-Weave Muscular Actuators &amp; Multi-Ton Joint Stabilizers</span>
-              <span class="chapter-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="chapter-body" id="ch2">
-              <p>
-                The muscular actuation system of GARUDA does not replicate biological skeletal muscle in any conventional sense. Where organic myosin-actin cross-bridges generate contractile force through adenosine triphosphate hydrolysis — an inherently thermodynamically inefficient electrochemical process — the GARUDA organism employs a braided carbon-fiber actuator architecture informed by the structural principles of high-performance aerospace cabling. Each primary actuator bundle consists of seventeen thousand individual carbon nanotube fibers with a diameter of 8 nanometers, woven in a sixteen-plied helical braid geometry adapted from the torsional load models used in helicopter rotor blade manufacture. This geometry allows each millimeter-diameter actuator bundle to generate continuous isometric tension of 4.8 kN, with a burst capacity of 7.2 kN under electrochemical amplification, without experiencing the micro-fracture propagation characteristic of conventional carbon composite structures under cyclic fatigue loading.
-              </p>
-              <div class="spec-callout">
-                <strong>ACTUATOR SPEC:</strong> Bundle diameter: 1.0 mm · Continuous tension: 4,800 N · Burst tension: 7,200 N · Fatigue threshold: >50,000,000 cycles at 85% load
-              </div>
-              <p>
-                Joint stabilization is achieved through a multi-layered approach unique to the GARUDA biomechanical program. The primary shoulder joints — designated GSJ-1 and GSJ-2 — are the most heavily engineered nodes in the entire structural hierarchy, bearing the vector resultant of wing lift, drag, pitching moment, and gravitational payload simultaneously during peak flight maneuvers. Each shoulder joint integrates a tri-axial titanium ball race with a contact sphere diameter of 220 millimeters, machined to a surface finish of Ra 0.025 micrometers — smoother than a grade-10 optical lens — to minimize tribological wear under continuous rotational loads. The bearing races are flooded with synthetic perfluoropolyether lubricant under constant recirculating pressure of 0.8 MPa, and equipped with electromagnetic anti-friction supplementation coils that generate a partial magnetic levitation effect at the bearing interface during peak load events. This combined hydrodynamic and magnetic tribological system reduces effective friction coefficient at the joint surface to 0.0003 — approximately four times lower than the theoretical minimum achievable with dry rolling elements — enabling the wing-root joints to sustain continuous radial loads of 120 metric tons without any detectable thermal buildup in the bearing housing.
-              </p>
-              <p>
-                Secondary stabilization at every major joint — including elbow, knee, hip, and ankle — is provided by a set of four ultra-high-modulus carbon-fiber ligamentous bands arranged in a cruciform geometry that opposes both rotational and translational joint displacement. These bands are pre-stressed during assembly to a baseline tension of 1.8 kN per band, ensuring that zero joint slack exists at any position within the range of motion. Active tension modulation is executed by distributed piezoelectric actuator arrays embedded within the band composite cross-section, capable of adjusting band tension by ±0.6 kN within 2 milliseconds — far faster than any biologically-mediated reflexive stabilization mechanism. The complete joint stabilization system therefore operates as a closed-loop structural servo: sensors measuring joint angle, angular velocity, and load vector continuously update piezoelectric actuator commands at 2 kHz, maintaining precise structural integrity even during the violent aerodynamic disturbances encountered during inverted maneuvers at trans-sonic airspeeds.
-              </p>
-              <p>
-                The full-body carbon-weave muscular complement consists of 847 discrete actuator bundle groups, organized into 23 functional muscular regions following the classical Vedic Marma point anatomical map — the ancient Indian science identifying 107 vital junction points of the bioenergetic body. Rather than treating these as purely anatomical reference points, the GARUDA engineering team employed the Marma map as a topological optimization template for actuator routing geometry, distributing force transmission pathways to minimize peak stress concentrations at critical junctions. The resulting actuator routing topology bears a striking resemblance to the Vedic Nadi energy channel system, with three primary trunk lines — corresponding to the Sushumna, Ida, and Pingala nadis — running along the dorsal midline and bilateral paravertebral regions, feeding into secondary distribution manifolds at each limb root and terminating in fine-grain distal actuator meshes at the extremities and finger segments.
-              </p>
-            </div>
-          </div>
-
-          <!-- Chapter 3 -->
-          <div class="chapter-accordion">
-            <button class="chapter-header" data-chapter="ch3" aria-expanded="false">
-              <span class="chapter-num">CH.III</span>
-              <span class="chapter-title">Dynamic Aerodynamics of Twin 10-Meter Carbon-Fiber Blade Matrices</span>
-              <span class="chapter-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="chapter-body" id="ch3">
-              <p>
-                The twin wing assemblies of Project GARUDA represent the pinnacle of the program's engineering achievement — an aerodynamic architecture of such complexity and elegance that it defies direct analogue in any prior biological or mechanical flight system. Each wing spans precisely 10.0 meters from root pivot to tip, yielding a total wingspan of 20.0 meters with the organism at standard anatomical standing height of 4.57 meters (15 feet). The wing planform was derived from a computational optimization study combining elements of the wandering albatross wing geometry — optimized by evolution for extreme efficiency at low-frequency, high-lift flapping — with the high-aspect-ratio wing mathematics of high-altitude reconnaissance aircraft, synthesized through iterative genetic algorithm aerodynamic analysis across a Reynolds number envelope from 8 × 10⁵ at hovering to 4.2 × 10⁷ at maximum sustained airspeed.
-              </p>
-              <p>
-                The primary structural element of each wing is a continuous carbon-fiber spar running from root to 85% span, manufactured from unidirectional T1100-grade carbon fibers in an epoxy matrix with a fiber volume fraction of 0.65. This main spar achieves a bending stiffness of 4.8 × 10⁷ N·m² — sufficient to resist the root bending moment of 2.6 × 10⁶ N·m generated during maximum-load pull-up maneuvers at 12G without detectable aeroelastic deformation. Secondary chordwise spars run at 20% and 65% chord positions, interconnected by a corrugated rib structure of honeycomb-core carbon panels at 38-centimeter intervals. The resulting wing box is covered with a single-ply carbon-fiber wing skin of 0.8mm nominal thickness, bonded to the rib and spar flanges with a toughened bismaleimide adhesive system capable of operating continuously at 180°C — a critical requirement given the aerodynamic surface temperatures encountered at near-sonic airspeeds. The entire structural wing architecture from root pivot to wingtip trailing edge weighs 47 kilograms per panel, giving a full-wingspan structural mass of 94 kilograms — representing a structural mass fraction of approximately 15% of total organism operational mass.
-              </p>
-              <div class="spec-callout">
-                <strong>WING DATUM:</strong> Full span: 20.0 m · Root chord: 1.4 m · Tip chord: 0.32 m · Aspect ratio: 18.7 · Wing area: 12.8 m² per panel · Max flap frequency (Cruise): 0.25 Hz
-              </div>
-              <p>
-                Active aeroelastic morphing — the real-time reshaping of wing camber, twist, and planform geometry during flight — is achieved through a distributed network of 144 shape-memory alloy actuator ribbons embedded within the composite wing skin at 7-degree angular intervals relative to the chord line. These ribbons, fabricated from nickel-titanium Nitinol alloy with a phase transformation temperature calibrated to 42°C, respond to variable-temperature hydraulic fluid pumped through micro-channels in the wing skin, enabling localized camber changes of up to ±12 degrees relative to the neutral wing profile within a response time of 340 milliseconds. This morphing system enables the GARUDA organism to continuously reconfigure its wing geometry to maintain optimal aerodynamic efficiency across the full flight speed envelope — transitioning smoothly from the high-camber, high-angle-of-attack wing profile required for hovering at near-zero airspeed, through the moderate-camber cruising configuration optimized for maximum lift-to-drag ratio at 180 knots, to the swept, low-camber configuration required for efficient dash speeds approaching Mach 0.85 at altitude.
-              </p>
-              <p>
-                Flapping kinematics are controlled by the primary wing-drive actuator assembly at the shoulder joint — a high-torque carbon-weave bundle system capable of generating a peak stroke moment of 1.8 × 10⁶ N·m about the flap axis, with a continuous rated torque of 0.95 × 10⁶ N·m. The downstroke begins with the wing fully extended and set to maximum positive camber, sweeping through 65 degrees of flap angle in 0.8 seconds during cruising rhythm, generating a downward-directed lift vector that, combined with the forward thrust component arising from the wing's three-dimensional swept geometry, propels the organism forward and upward. The recovery upstroke employs partial wing folding at mid-chord to reduce the aerodynamic drag opposing the upward sweep — a kinematic strategy convergently evolved in virtually all large biological fliers, now replicated with synthetic precision in the GARUDA system. At peak load conditions, flap frequency increases to approximately 2.8 Hz, and the wing geometry transitions to the subsonic dash configuration, generating aerodynamic loads that induce root bending moments approaching the structural limit with a design safety factor of 1.35 — a margin deliberately set lower than civil aerospace norms to minimize structural mass, reflecting the operational philosophy that accepts elevated risk in exchange for extraordinary performance.
-              </p>
-            </div>
-          </div>
-
-          <!-- Chapter 4 -->
-          <div class="chapter-accordion">
-            <button class="chapter-header" data-chapter="ch4" aria-expanded="false">
-              <span class="chapter-num">CH.IV</span>
-              <span class="chapter-title">Biological Energy Capacitors, Metabolic Buffering &amp; Caloric Storage</span>
-              <span class="chapter-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="chapter-body" id="ch4">
-              <p>
-                The power economy of Project GARUDA operates on a metabolic architecture that is biologically unprecedented in its energy density, storage geometry, and peak power delivery characteristics. The fundamental energy currency of the organism remains adenosine triphosphate — the universal biochemical energy carrier — but the GARUDA metabolic architecture amplifies the effective ATP flux available for muscular actuation by a factor of approximately 4,800 relative to a peak-performance biological baseline, through three interlocking innovations: ultra-dense lipid storage matrices, hyper-efficient mitochondrial arrays, and high-capacity phosphocreatine buffer systems integrated directly into the carbon-weave actuator bundles.
-              </p>
-              <p>
-                The primary long-duration energy reservoir consists of a distributed network of synthetic adipose matrices — engineered fat tissue with a triglyceride storage density of 41 MJ/kg, approximately 8.3% above the theoretical maximum for biological adipocytes due to the use of exotic fatty acid structures with ultra-long chain lengths and optimized molecular packing geometries. These adipose matrices are distributed along the dorsal mid-spine region, the anterior thoracic wall between the pectoral actuator bundles, and within dedicated storage cavities in the reinforced iliac crests. At maximum storage capacity, the integrated lipid reserve contains approximately 1.2 × 10⁷ kilocalories of metabolizable energy — sufficient to sustain continuous near-peak-power operation for an estimated 14.7 hours without external resupply, or moderate cruising flight for 62 hours. The lipid mobilization network — synthetic lipolysis enzyme arrays integrated into the adipose matrix — can deliver free fatty acids to the circulatory system at a maximum rate of 2,200 mmol/min, supporting metabolic rates of up to 28,000 W of aerobic power output.
-              </p>
-              <div class="spec-callout">
-                <strong>ENERGY DATUM:</strong> Max lipid reserves: 1.2 × 10⁷ kcal · Peak aerobic power: 28,000 W · Phosphocreatine buffer capacity: 14,400 kJ · Metabolic rate (cruise): 3,200 kcal/hr
-              </div>
-              <p>
-                The capillary buffering network is architecturally analogous to a hydraulic accumulator system in mechanical engineering: a distributed array of high-pressure synthetic blood vessel loops containing enzymatic buffer solutions that smooth the mismatch between slow lipid mobilization kinetics and the rapid power demands of burst flight maneuvers. When muscular power demand spikes — as during a sudden climb-rate increase or an evasive maneuver — the capillary buffer network instantly releases pre-dissolved glucose and lactate substrates into the active muscle vascular beds, bridging the 4.2-second delay between onset of high-power demand and full lipid mobilization ramp-up. These buffer reservoirs carry a total pre-loaded substrate energy equivalent of 180,000 kilocalories — representing approximately 5.6 hours of sustained cruising flight — and are continuously replenished from the primary lipid stores via background enzymatic synthesis running at all times.
-              </p>
-              <p>
-                The mitochondrial power generation infrastructure has been re-engineered from first principles. Each mitochondrion in the GARUDA organism is a synthetic organelle — designated Mk-IV SynMito — with a cristae membrane surface area 12.4 times that of a biological mitochondrion of equivalent outer membrane volume, achieved through a fractal invagination geometry inspired by the mathematical structure of the Sierpinski carpet. This geometry maximizes the ATP synthase enzyme packing density per unit mitochondrial volume, yielding an ATP production rate of 3.8 × 10⁻¹⁵ mol ATP per second per organelle — compared to 2.1 × 10⁻¹⁶ mol/s in elite biological athletic mitochondria. The complete mitochondrial complement, distributed throughout 847 actuator bundle regions, represents a total installed power generation capacity of 38,400 W of sustained aerobic output — the metabolic equivalent of eight elite Tour de France cyclists operating simultaneously, continuously, within a single integrated organism.
-              </p>
-            </div>
-          </div>
-
-          <!-- Chapter 5 -->
-          <div class="chapter-accordion">
-            <button class="chapter-header" data-chapter="ch5" aria-expanded="false">
-              <span class="chapter-num">CH.V</span>
-              <span class="chapter-title">Acoustic Fluid Dynamics &amp; Micro-Vibrational Drone-Frequency Propulsion</span>
-              <span class="chapter-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="chapter-body" id="ch5">
-              <p>
-                The GARUDA propulsion system extends beyond the aerodynamic wing-flapping mechanism described in Chapter III to encompass a secondary, non-obvious propulsive modality: high-frequency micro-vibrational actuation of the entire wing and body surface, generating acoustic momentum transfer effects analogous — at a vastly larger scale — to the propulsive mechanisms of insect wings operating in the biologically-unique regime of low-Reynolds-number fluid dynamics. This regime, where viscous forces dominate over inertial forces and leading-edge vortex dynamics play a critical energetic role, has historically been considered inaccessible to organisms of the GARUDA scale. However, engineering analysis reveals that by operating wing surface vibrations at a frequency band between 220 Hz and 840 Hz — above the primary structural resonance of the wing and below the first acoustic modal resonance of the surrounding air column — a coherent system of micro-scale vorticity structures is generated across the wing surface. These micro-vortices create a thin, energetically-dense boundary layer of pre-accelerated air adjacent to the wing surface, effectively reducing the onset-of-separation angle of attack by 6.8 degrees relative to a static wing surface at equivalent Reynolds numbers.
-              </p>
-              <p>
-                The physical mechanism of micro-vibrational propulsion in the GARUDA context operates through a phenomenon designated Acoustic Vortex Seeding (AVS). The wing surface is instrumented with a distributed array of 2,880 piezoelectric transducer elements per panel — arranged in a hexagonal close-packed grid with 18-millimeter element spacing — each capable of generating surface normal displacements of ±0.06 mm at frequencies up to 1,200 Hz. When driven in coordinated phase patterns by the AVS control algorithm, these transducers create travelling acoustic waves along the wing surface at velocities and wavelengths precisely matched to amplify the spanwise-rolling leading-edge vortex. In the extreme high-torque operating mode — designated Extreme Peak in the flight management system — all 5,760 wing surface transducers are driven simultaneously at maximum amplitude with a cross-coupled sinusoidal and cosinusoidal modulation pattern. This produces an acoustic output of approximately 184 decibels at one meter from the wing surface — a sound pressure level sufficient to cause structural damage to unprotected biological tissue — simultaneously generating a net propulsive force contribution of 8,200 N per wing panel, augmenting the primary flapping thrust by 14.7%.
-              </p>
-              <div class="spec-callout">
-                <strong>AVS DATUM:</strong> Transducer count (total): 5,760 · Operating frequency: 220–840 Hz · Peak acoustic output: 184 dB SPL @ 1m · Propulsive augmentation: +14.7% @ Extreme Peak mode
-              </div>
-              <p>
-                Fluid dynamic resonance within the organism's internal architecture adds a further, less-expected propulsive contribution through the mechanisms of internal acoustic fluid streaming. The organism's vascular network, totaling 38 kilometers of synthetic vessel length in the primary circulatory circuit, acts as an extended acoustic resonator array when the AVS system operates in certain frequency bands. Blood analogue fluid — a synthetic hemoglobin-based oxygen carrier with a density of 1,065 kg/m³ and a speed of sound of 1,540 m/s — transmits acoustic pressure waves from the wing surface transducers through the vascular walls and into the internal body cavity. These transmitted waves create standing pressure patterns within abdominal cavity fluid reservoirs, generating oscillatory flows that circulate fluid in coherent streaming patterns — a phenomenon known in acoustic physics as Eckart streaming or acoustic streaming. In the GARUDA context, this internal streaming has been precisely engineered to accelerate metabolic substrate delivery to the highest-demand actuator zones during peak power events, reducing the onset-to-peak latency of extreme burst maneuvers from 4.2 seconds to 1.1 seconds by pre-loading local vascular beds with oxygenated substrate fluid through acoustically-driven convective enhancement.
-              </p>
-              <p>
-                The drone-frequency propulsive modality also contributes to a remarkable secondary function: active aeroacoustic signature management. By modulating the AVS transducer phase patterns in real-time, the GARUDA flight management system can generate a coherent destructive interference field in the near-field acoustic radiation from the wing, reducing the broadband noise signature of the flapping wing system by up to 22 dB in the 80-400 Hz range — the frequency band corresponding to the peak sensitivity of biological auditory systems. This active noise cancellation capability, derived from the same transducer infrastructure that provides propulsive augmentation, gives the GARUDA organism the extraordinary operational characteristic of near-silent high-speed flight at cruise speeds — an acoustic signature indistinguishable from ambient wind noise at distances greater than 340 meters, conferring profound strategic and tactical implications for all mission profiles requiring reduced-signature approach or withdrawal.
-              </p>
-            </div>
-          </div>
-
-        </div><!-- /literature-panel -->
-
-        <!-- Structural Spec Cards -->
-        <div class="spec-grid-panel">
-          <div class="spec-card">
-            <div class="spec-card-label">Total Standing Height</div>
-            <div class="spec-card-value">4.57</div>
-            <div class="spec-card-unit">Meters (15 ft structural class)</div>
-          </div>
-          <div class="spec-card">
-            <div class="spec-card-label">Full Wingspan</div>
-            <div class="spec-card-value">20.0</div>
-            <div class="spec-card-unit">Meters (twin 10m blade matrices)</div>
-          </div>
-          <div class="spec-card">
-            <div class="spec-card-label">Endoskeletal Material</div>
-            <div class="spec-card-value">Ti-6Al-4V</div>
-            <div class="spec-card-unit">Grade-5 Aerospace Titanium</div>
-          </div>
-          <div class="spec-card">
-            <div class="spec-card-label">Structural Mass</div>
-            <div class="spec-card-value">620</div>
-            <div class="spec-card-unit">kg (base, excluding payload)</div>
-          </div>
-        </div>
-
-      </div><!-- /blueprint-layout -->
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         TAB PANEL 2 — DYNAMICS & PHYSICS ENGINE
-    ══════════════════════════════════════════════════════ -->
-    <section class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-btn-2">
-      <div class="dynamics-layout">
-
-        <!-- Control Panel Column -->
-        <aside class="control-panel" aria-label="Simulation Controls">
-
-          <!-- Payload Slider -->
-          <div class="control-section">
-            <div class="control-section-header">◈ Active Payload Configuration</div>
-            <div class="control-section-body">
-              <div class="slider-group">
-                <div class="slider-label-row">
-                  <span class="slider-label">Active Payload Weight</span>
-                  <span class="slider-value-display" id="payload-display">0 MT</span>
-                </div>
-                <input type="range" id="payload-slider" min="0" max="250" step="1" value="0"
-                       aria-label="Payload weight in metric tons" />
-                <div class="slider-ticks">
-                  <span class="slider-tick">0 MT</span>
-                  <span class="slider-tick">125 MT</span>
-                  <span class="slider-tick">250 MT</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flight Mode Selector -->
-          <div class="control-section">
-            <div class="control-section-header">◈ Flight Output Setting</div>
-            <div class="control-section-body">
-              <div class="flight-mode-group" role="radiogroup" aria-label="Flight mode selection">
-                <button class="flight-mode-btn active"
-                        data-mode="cruising"
-                        role="radio"
-                        aria-checked="true">
-                  <span class="fmb-dot"></span>
-                  <span class="fmb-content">
-                    <span class="fmb-name">Cruising</span>
-                    <span class="fmb-desc">0.25 Hz · Low sinusoidal oscillation</span>
-                  </span>
-                </button>
-                <button class="flight-mode-btn"
-                        data-mode="subsonic"
-                        role="radio"
-                        aria-checked="false">
-                  <span class="fmb-dot"></span>
-                  <span class="fmb-content">
-                    <span class="fmb-name">Subsonic Dash</span>
-                    <span class="fmb-desc">1.4 Hz · Accelerated wing cycle</span>
-                  </span>
-                </button>
-                <button class="flight-mode-btn"
-                        data-mode="extreme"
-                        role="radio"
-                        aria-checked="false">
-                  <span class="fmb-dot"></span>
-                  <span class="fmb-content">
-                    <span class="fmb-name">Extreme Peak</span>
-                    <span class="fmb-desc">AVS 2.8 Hz+ · Drone-frequency torque</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Energy Replenishment -->
-          <div class="control-section">
-            <div class="control-section-header">◈ Reserve Management</div>
-            <div class="control-section-body">
-              <button class="btn-replenish" id="btn-replenish"
-                      aria-label="Replenish energy reserves">
-                ⚡ REPLENISH RESERVES
-              </button>
-            </div>
-          </div>
-
-        </aside>
-
-        <!-- Metrics Dashboard Column -->
-        <div class="metrics-panel">
-
-          <div class="metrics-header">
-            <h2 class="metrics-title">Live Performance Metrics</h2>
-            <span class="metrics-live-badge">LIVE</span>
-          </div>
-
-          <!-- Four Metric Cards -->
-          <div class="metrics-grid">
-
-            <div class="metric-card">
-              <div class="metric-card-label">Power Generation</div>
-              <div class="metric-value-row">
-                <span class="metric-value" id="metric-power">0.0</span>
-                <span class="metric-unit">MW</span>
-              </div>
-              <div class="metric-bar">
-                <div class="metric-bar-fill" id="bar-power" style="width:0%"></div>
-              </div>
-            </div>
-
-            <div class="metric-card">
-              <div class="metric-card-label">Metabolic Depletion</div>
-              <div class="metric-value-row">
-                <span class="metric-value" id="metric-metabolic">0</span>
-                <span class="metric-unit">kcal/hr</span>
-              </div>
-              <div class="metric-bar">
-                <div class="metric-bar-fill" id="bar-metabolic" style="width:0%"></div>
-              </div>
-            </div>
-
-            <div class="metric-card">
-              <div class="metric-card-label">Joint Stress Level</div>
-              <div class="metric-value-row">
-                <span class="metric-value" id="metric-stress">0.0</span>
-                <span class="metric-unit">%</span>
-              </div>
-              <div class="metric-bar">
-                <div class="metric-bar-fill" id="bar-stress" style="width:0%"></div>
-              </div>
-            </div>
-
-            <div class="metric-card">
-              <div class="metric-card-label">Wing Flap Frequency</div>
-              <div class="metric-value-row">
-                <span class="metric-value" id="metric-freq">0.25</span>
-                <span class="metric-unit">Hz</span>
-              </div>
-              <div class="metric-bar">
-                <div class="metric-bar-fill" id="bar-freq" style="width:10%"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Active Energy Capacitor -->
-          <div class="capacitor-section">
-            <div class="capacitor-header">
-              <span class="capacitor-title">⬡ Active Energy Capacitor</span>
-              <span class="capacitor-pct" id="cap-pct">100%</span>
-            </div>
-            <div class="capacitor-bar-track" aria-label="Energy capacitor level">
-              <div class="capacitor-bar-fill" id="cap-bar" style="width:100%"></div>
-            </div>
-            <p class="capacitor-status" id="cap-status">
-              Reserve status: FULLY CHARGED · All systems nominal
+            <!-- The 3D canvas viewport inserts directly here -->
+            <div id="canvas-container" class="diagram-container"></div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center; margin-top: 10px;">
+                Left-Click + Drag to rotate chassis | Scroll to Zoom
             </p>
-          </div>
+        </div>
 
-          <!-- Simulation Readout Log -->
-          <div class="simulation-readout" id="sim-readout" aria-label="Simulation log" aria-live="polite">
-            <!-- Lines injected by app.js -->
-          </div>
+        <div class="panel">
+            <h2>Physical Metrics Summary</h2>
+            <ul class="specs-list">
+                <li><strong>Height:</strong> 15 Feet (3.05 meters) elite standing chassis.</li>
+                <li><strong>Dry Weight:</strong> ~750 kg engineered structural footprint.</li>
+                <li><strong>Structural Core:</strong> Complete Grade-5 Titanium internal frame.</li>
+                <li><strong>Active Flight System:</strong> Twin 10-meter flexible high-performance wings.</li>
+                <li><strong>Integrated Wing Wrap:</strong> Wings transition smoothly into an impact-resistant full-length protective cape when grounded.</li>
+                <li><strong>Extreme Strength:</strong> Dense Carbon-weave musculature prevents structural shoulder dislocation during multi-ton load distributions.</li>
+            </ul>
+        </div>
+    </div>
 
-        </div><!-- /metrics-panel -->
-
-      </div><!-- /dynamics-layout -->
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         TAB PANEL 3 — VEDIC LINEAGE FRAMEWORK
-    ══════════════════════════════════════════════════════ -->
-    <section class="tab-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-btn-3">
-
-      <div class="lineage-header">
-        <h2 class="lineage-title">Vedic Cosmological Lineage Grid</h2>
-        <p class="lineage-subtitle">Sacred Ancestral Architecture · Ten Principal Cosmological Entities · Template Framework</p>
-      </div>
-
-      <div class="lineage-grid" role="list">
-
-        <!-- Card 1: Brahman -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">brahman.jpg</span>
+    <!-- TAB 2: SIMULATOR -->
+    <div id="simulator" class="tab-content grid-2col">
+        <div class="panel">
+            <h2>Dynamic Parameter Drivers</h2>
+            <div class="control-group">
+                <label for="loadSlider">Active Payload Weight (Metric Tons): <span id="loadVal" style="color: var(--neon-blue);">0</span> T</label>
+                <input type="range" id="loadSlider" class="slider" min="0" max="250" value="0" oninput="updateSimulation()">
             </div>
-            <img src="brahman.jpg" alt="Brahman" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">01</span>
-            <h3 class="lineage-card-name">Brahman</h3>
-            <span class="lineage-card-role">The Absolute · Supreme Cosmic Principle</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-        <!-- Card 2: Vac -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">vac.jpg</span>
+            <div class="control-group">
+                <label for="outputSlider">Flight Output Setting: <span id="outputVal" style="color: var(--neon-blue);">Cruising</span></label>
+                <input type="range" id="outputSlider" class="slider" min="1" max="3" value="1" oninput="updateSimulation()">
             </div>
-            <img src="vac.jpg" alt="Vac" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">02</span>
-            <h3 class="lineage-card-name">Vac</h3>
-            <span class="lineage-card-role">Sacred Speech · Primordial Vibration</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-        <!-- Card 3: Prana -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">prana.jpg</span>
+            <div class="control-group">
+                <button class="btn" onclick="chargeCapacitor()">Replenish Metabolic Reserves</button>
             </div>
-            <img src="prana.jpg" alt="Prana" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">03</span>
-            <h3 class="lineage-card-name">Prana</h3>
-            <span class="lineage-card-role">Life Force · Cosmic Breath</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
+        </div>
 
-        <!-- Card 4: Aditi -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">aditi.jpg</span>
+        <div class="panel">
+            <h2>Live Performance Analysis</h2>
+            <div class="metric-card">
+                <div class="metric-title">Calculated Power Generation</div>
+                <div class="metric-value" id="powerMetric">0.45 MW</div>
             </div>
-            <img src="aditi.jpg" alt="Aditi" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">04</span>
-            <h3 class="lineage-card-name">Aditi</h3>
-            <span class="lineage-card-role">Mother of Adityas · Boundless Sky</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-        <!-- Card 5: Surya -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">surya.jpg</span>
+            <div class="metric-card">
+                <div class="metric-title">Metabolic Depletion Estimation</div>
+                <div class="metric-value" id="burnMetric">15,000 kcal/day</div>
             </div>
-            <img src="surya.jpg" alt="Surya" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">05</span>
-            <h3 class="lineage-card-name">Surya</h3>
-            <span class="lineage-card-role">Solar Deity · Illuminator of Worlds</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-        <!-- Card 6: Indra -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">indra.jpg</span>
+            <div class="metric-card">
+                <div class="metric-title">Internal Joint Stress Level</div>
+                <div class="metric-value" id="stressMetric">0.2% Base Limit</div>
             </div>
-            <img src="indra.jpg" alt="Indra" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">06</span>
-            <h3 class="lineage-card-name">Indra</h3>
-            <span class="lineage-card-role">King of Gods · Lord of Storms</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-        <!-- Card 7: Agni -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">agni.jpg</span>
+            <div class="metric-card">
+                <div class="metric-title">Biological Energy Capacitor</div>
+                <div class="metric-value" id="capacitorMetric">100.0%</div>
             </div>
-            <img src="agni.jpg" alt="Agni" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">07</span>
-            <h3 class="lineage-card-name">Agni</h3>
-            <span class="lineage-card-role">Fire Deity · Sacred Combustion</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
+        </div>
+    </div>
 
-        <!-- Card 8: Varuna -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">varuna.jpg</span>
+    <!-- TAB 3: VEDIC LINEAGE PANTHEON -->
+    <div id="hinduism" class="tab-content">
+        <div class="panel">
+            <h2>The Cosmic Framework of Hinduism</h2>
+            <p>Hinduism is built upon deep cosmic order, cyclical time scales (Yugas), and the manifestation of supreme consciousness through distinct divine entities. Within this system, Garuda serves as a sacred, powerful mount, navigating the lineages of cosmic manifestation and cosmic order.</p>
+        </div>
+
+        <div class="panel">
+            <h2>Vedic Lineage & The Pantheon</h2>
+            <div class="pantheon-grid">
+                <h3 class="section-title">The Grandparents</h3>
+                <div class="god-card"><div class="god-img-container"><img src="brahman.jpg" alt="Brahman"></div><div class="god-info"><h3>Brahman</h3><p>The ultimate, unchanging reality and supreme cosmic spirit substrate.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="vac.jpg" alt="Vac"></div><div class="god-info"><h3>Vac</h3><p>The primordial goddess of speech, sound, and cosmic breath utterance.</p></div></div>
+
+                <h3 class="section-title">The Parents</h3>
+                <div class="god-card"><div class="god-img-container"><img src="prana.jpg" alt="Prana"></div><div class="god-info"><h3>Prana</h3><p>The vital life force energy that animates and runs through all creation.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="aditi.jpg" alt="Aditi"></div><div class="god-info"><h3>Aditi</h3><p>The infinite celestial mother goddess, wife of Prana, and boundless sky.</p></div></div>
+
+                <h3 class="section-title">The Princes (Sons)</h3>
+                <div class="god-card"><div class="god-img-container"><img src="surya.jpg" alt="Surya"></div><div class="god-info"><h3>Surya</h3><p>The solar deity, illuminating reality and driving seasonal cycles.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="indra.jpg" alt="Indra"></div><div class="god-info"><h3>Indra</h3><p>The king of gods, wielder of the thunderbolt, and ruler of weather.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="agni.jpg" alt="Agni"></div><div class="god-info"><h3>Agni</h3><p>The god of fire, acceptor of sacrifices, and divine messenger.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="varuna.jpg" alt="Varuna"></div><div class="god-info"><h3>Varuna</h3><p>The keeper of cosmic law, ocean spaces, and celestial waters.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="vayu.jpg" alt="Vayu"></div><div class="god-info"><h3>Vayu</h3><p>The lord of winds, atmospheric movement, and spatial dynamic force.</p></div></div>
+                <div class="god-card"><div class="god-img-container"><img src="chandra.jpg" alt="Chandra"></div><div class="god-info"><h3>Chandra</h3><p>The lunar king, governing nighttime pathways, tides, and plant life.</p></div></div>
             </div>
-            <img src="varuna.jpg" alt="Varuna" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">08</span>
-            <h3 class="lineage-card-name">Varuna</h3>
-            <span class="lineage-card-role">God of Celestial Ocean · Cosmic Law</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
+        </div>
+    </div>
 
-        <!-- Card 9: Vayu -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">vayu.jpg</span>
-            </div>
-            <img src="vayu.jpg" alt="Vayu" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">09</span>
-            <h3 class="lineage-card-name">Vayu</h3>
-            <span class="lineage-card-role">Wind Deity · Breath of the Cosmos</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-        <!-- Card 10: Chandra -->
-        <article class="lineage-card" role="listitem">
-          <div class="lineage-card-image-wrap">
-            <div class="lineage-card-image-placeholder">
-              <div class="lineage-card-image-placeholder-icon">🖼</div>
-              <span class="lineage-card-image-placeholder-text">chandra.jpg</span>
-            </div>
-            <img src="chandra.jpg" alt="Chandra" loading="lazy"
-                 onerror="this.style.display='none'" />
-          </div>
-          <div class="lineage-card-body">
-            <span class="lineage-card-index">10</span>
-            <h3 class="lineage-card-name">Chandra</h3>
-            <span class="lineage-card-role">Lunar Deity · Keeper of Tides</span>
-            <div class="lineage-card-divider"></div>
-            <p class="lineage-card-text">Needs to fill</p>
-          </div>
-        </article>
-
-      </div><!-- /lineage-grid -->
-
-    </section>
-
-  </main><!-- /main-content -->
-
-  <!-- Vedic Ornament Footer Divider -->
-  <div class="vedic-ornament" aria-hidden="true">
-    <div class="vedic-ornament-line"></div>
-    <span class="vedic-ornament-symbol">ᳶ ✦ ᳕</span>
-    <div class="vedic-ornament-line"></div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="app-footer" role="contentinfo">
-    <span class="footer-brand">Project <span>GARUDA</span> · Vedic Biomechanical Framework</span>
-    <span class="footer-meta">Grade-5 Ti Endoskeletal Architecture · Carbon-Weave Actuation · Acoustic Vortex Seeding · Rev. IV</span>
-  </footer>
-
-</div><!-- /#app -->
+    <!-- Loads the interactive 3D script -->
+    <script src="app.js"></script>
 </body>
 </html>
